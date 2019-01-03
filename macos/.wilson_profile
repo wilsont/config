@@ -1,0 +1,30 @@
+#Linus
+alias dnsflush='sudo killall -HUP mDNSResponder'
+alias ll='ls -al'
+
+#GO
+export GOPATH=/Users/w.tang/git/go
+export GOROOT=/usr/local/opt/go/libexec
+export CDPATH=H$GOPATH/src/github.com:$GOPATH/src/code.google.com/p
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
+gocd () { cd `go list -f '{{.Dir}}' $1` }
+
+#PHP
+export XDEBUG_REMOTE_HOST=docker.for.mac.localhost
+alias fixcs='./vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix -vvv --using-cache=no --allow-risky=yes --config=.php_cs --path-mode=intersection $(git diff --name-only --diff-filter=ACMRTUXB master| grep php)'
+
+#NVM NPM
+export NVM_DIR="$HOME/.nvm"
+export NODE_ENV=development
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
+
+#Git
+export GITHUB_TOKEN=
+export HOMEBREW_GITHUB_API_TOKEN=
+alias ost='open /Applications/SourceTree.app/Contents/MacOS/SourceTree'
+
+#Docker
+alias d='docker'
+alias dc='docker-compose'
